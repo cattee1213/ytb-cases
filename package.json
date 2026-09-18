@@ -1,0 +1,19 @@
+{
+  "name": "ytb-cases",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "bun --filter shorts-transition dev",
+    "build": "bun --filter shorts-transition build",
+    "preview": "bun --filter shorts-transition preview",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
