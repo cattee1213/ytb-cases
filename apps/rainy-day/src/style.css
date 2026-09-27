@@ -1,0 +1,116 @@
+:root {
+  color-scheme: dark;
+  background: #010206;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #010206;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  background: #010206;
+}
+
+.sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #010208 0%, #050812 40%, #0a101b 74%, #101826 100%);
+}
+
+#scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 34%, rgba(0, 0, 0, 0.68) 100%);
+}
+
+.flash {
+  --flash-x: 50%;
+  --flash-y: 22%;
+  --flash-rx: 11%;
+  --flash-ry: 14%;
+  --hit-x: 50%;
+  --hit-y: 72%;
+  --hit-rx: 9%;
+  --hit-ry: 11%;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  mix-blend-mode: screen;
+  background:
+    radial-gradient(
+      calc(var(--flash-rx) * 2.8) calc(var(--flash-ry) * 2.35) at var(--flash-x) var(--flash-y),
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(214, 230, 255, 0.09) 12%,
+      rgba(170, 204, 248, 0.035) 28%,
+      rgba(146, 182, 232, 0.012) 52%,
+      rgba(136, 170, 220, 0.004) 76%,
+      transparent 100%
+    ),
+    radial-gradient(
+      calc(var(--hit-rx) * 1.7) calc(var(--hit-ry) * 1.7) at var(--hit-x) var(--hit-y),
+      rgba(255, 255, 255, 0.26) 0%,
+      rgba(206, 226, 255, 0.07) 16%,
+      rgba(166, 198, 242, 0.016) 44%,
+      transparent 100%
+    );
+}
+
+.hint {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: calc(18px + env(safe-area-inset-bottom));
+  margin: 0;
+  padding-inline: 16px;
+  text-align: center;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: clamp(11px, 2.5vw, 13px);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(214, 224, 242, 0.66);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+  user-select: none;
+  animation: hint-fade 7s ease forwards;
+}
+
+@keyframes hint-fade {
+  0%,
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hint {
+    animation: none;
+  }
+}
