@@ -6,8 +6,11 @@
   "workspaces": ["apps/*"],
   "scripts": {
     "dev": "bun --filter rainy-day dev",
+    "dev:glass": "bun --filter glass-rain dev",
     "build": "bun --filter rainy-day build",
+    "build:glass": "bun --filter glass-rain build",
     "preview": "bun --filter rainy-day preview",
+    "preview:glass": "bun --filter glass-rain preview",
     "test": "bun test"
   },
   "devDependencies": {
