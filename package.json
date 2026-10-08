@@ -8,6 +8,9 @@
     "dev": "bun --filter rainy-day dev",
     "build": "bun --filter rainy-day build",
     "preview": "bun --filter rainy-day preview",
+    "dev:aurelia": "bun --filter aurelia dev",
+    "build:aurelia": "bun --filter aurelia build",
+    "preview:aurelia": "bun --filter aurelia preview",
     "test": "bun test"
   },
   "devDependencies": {

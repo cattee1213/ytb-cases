@@ -1,0 +1,17 @@
+- generic [active] [ref=e1]:
+  - heading "Aurelia, a living exhibition" [level=1] [ref=e2]
+  - generic [ref=e3]:
+    - generic "Aurelia, six paintings made of light" [ref=e4]
+    - paragraph: Aurelia
+    - contentinfo:
+      - paragraph: I
+      - paragraph: Gilt
+      - paragraph: Leaf remembering the sun
+      - group "Rooms" [ref=e5]:
+        - button "Gilt" [ref=e6] [cursor=pointer]
+        - button "Ink" [ref=e7] [cursor=pointer]
+        - button "Glass" [ref=e8] [cursor=pointer]
+        - button "Garden" [ref=e9] [cursor=pointer]
+        - button "Silk" [ref=e10] [cursor=pointer]
+        - button "Bloom" [ref=e11] [cursor=pointer]
+    - paragraph: Click to turn the page · F for fullscreen
